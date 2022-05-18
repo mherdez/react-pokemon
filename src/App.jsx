@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { getPokemones } from './helpers/getPokemon';
-
-const random = Math.floor(Math.random() * 4);
+import Pokemon from './Pokemon';
 
 function App() {
 	const [pokemones, setPokemones] = useState([]);
+	const random = Math.floor(Math.random() * 4);
 
 	useEffect(() => {
 		getPokemones().then((listaPokemon) =>
@@ -16,29 +16,7 @@ function App() {
 	if (pokemones.length > 0) {
 		return (
 			<div className='App'>
-				<header className='App-header'>
-					<h2>¿ Quién es este Pókemon ?</h2>
-				</header>
-				<main className='App-body'>
-					<div className='picture'>
-						<img
-							src={pokemones[random].img}
-							alt='pokemon'
-						/>
-					</div>
-					<div className='list'>
-						<ul>
-							{pokemones.map((pokemon) => (
-								<li
-									className='pokemon-item'
-									key={pokemon.id}
-								>
-									{pokemon.name}
-								</li>
-							))}
-						</ul>
-					</div>
-				</main>
+				<Pokemon pokemones={pokemones} random={random} />
 			</div>
 		);
 	}
