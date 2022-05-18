@@ -13,13 +13,15 @@ h1, h2, h3, h4 {
 }
 
 h3 {
-		margin-bottom: 15px;
+		margin: 15px 0 20px;
 
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 }
 
 h4 {
-		font-size: 2rem;
+		margin: 20px;
+
+		font-size: 2.3rem;
 }
 
 ul {
@@ -48,7 +50,7 @@ li {
 }
 
 .App-header {
-		padding: 20px 0 20px;
+		padding: 40px 0 20px;
 
 		font-size: calc(10px + 2vmin);
 }
@@ -65,7 +67,7 @@ li {
 		box-sizing: border-box;
 		width: 100%;
 		height: 250px;
-		margin: 10px auto 40px;
+		margin: 20px auto 50px;
 		/* border: 5px solid #970092; */
 
 		text-align: center;
