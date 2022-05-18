@@ -36,7 +36,7 @@ li {
 }
 
 .App-header {
-		padding: 40px 0;
+		padding: 40px 0 20px;
 
 		font-size: calc(10px + 2vmin);
 }
@@ -44,17 +44,18 @@ li {
 .App-body {
 		width: 500px;
 		margin: 0 auto;
+		padding: 20px;
 
-		border: 5px solid #61dafb;
+		/* border: 5px solid #61dafb;
+		border-radius: 10px; */
 }
 
 .picture {
 		box-sizing: border-box;
 		width: 100%;
 		height: 250px;
-		margin: 30px auto;
-
-		border: 5px solid #970092;
+		margin: 10px auto;
+		/* border: 5px solid #970092; */
 
 		text-align: center;
 }
@@ -62,8 +63,7 @@ li {
 .picture img {
 		height: 90%;
 		margin: 0 auto;
-
-		pointer-events: none;
+		/* pointer-events: none; */
 
 		-webkit-user-drag: none;
 }
@@ -79,13 +79,31 @@ li {
 } */
 
 .list {
-		border: 5px solid #c9a800;
+		width: 80%;
+		margin: 20px auto 0;
 }
 
 .list li {
-		margin: 0 0 15px;
+		margin: 25px 0 15px;
 }
 
 .App-link {
 		color: #61dafb;
+}
+
+.pokemon-item {
+		padding: 10px 0;
+
+		background-color: #565f62;
+		border: 2px solid #61dafb;
+
+		color: white;
+		text-transform: capitalize;
+
+		cursor: pointer;
+}
+
+.pokemon-item:hover {
+		background-color: #354549;
+		border: 2px solid #32a2c1;
 }
