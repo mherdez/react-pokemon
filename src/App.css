@@ -1,7 +1,27 @@
+* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+
+		font-size: 20px;
+}
+
+@media (min-width: 576px) {
+		* {
+				font-size: 25px;
+		}
+}
 
 body {
-		padding: 0;
-		margin: 0;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+		width: 100vw;
+		height: 100vh;
+
+		background-color: #282c34;
 
 		font-family: 'SST', sans-serif;
 }
@@ -9,24 +29,20 @@ body {
 h1, h2, h3, h4 {
 		margin: 0;
 
-		font-size: 2rem;
+		font-size: 1.5rem;
 }
 
 h3 {
-		margin: 15px 0 20px;
-
-		font-size: 1.8rem;
+		font-size: 1rem;
 }
 
 h4 {
-		margin: 20px;
-
-		font-size: 2.3rem;
+		font-size: 1.5rem;
 }
 
 ul {
-		padding: 0;
 		margin: 0;
+		padding: 0;
 }
 
 li {
@@ -36,12 +52,12 @@ li {
 }
 
 .App {
-		width: 100vw;
-		height: 100vh;
-		padding: 0;
-		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		gap: 1.5rem;
 
-		background-color: #282c34;
+		box-sizing: border-box;
 
 		color: white;
 		text-align: center;
@@ -50,31 +66,47 @@ li {
 }
 
 .App-header {
-		padding: 40px 0 20px;
+		flex: 1;
 
-		font-size: calc(10px + 2vmin);
+		padding: 1.2rem;
 }
 
 .App-body {
-		width: 500px;
-		padding: 10px 0;
-		margin: 0 auto;
+		display: flex;
+		flex: auto;
+		flex-direction: column;
+		justify-content: center;
 
-		/* border: 5px solid #61dafb; */
+		width: 80%;
+		margin: 0 auto;
+		padding: 0;
+}
+
+.footer {
+		display: flex;
+		flex: 1;
+		flex: auto;
+		flex-direction: column;
+		justify-content: center;
+
+		min-height: 4.5rem;
+		padding: 0 0 1rem;
 }
 
 .picture {
-		box-sizing: border-box;
-		width: 100%;
-		height: 250px;
-		margin: 20px auto 50px;
-		/* border: 5px solid #970092; */
+		width: 70%;
+		height: 60%;
+		max-height: 15rem;
+		margin: 0 auto;
 
 		text-align: center;
+
+		object-fit: cover;
 }
 
 .picture img {
-		height: 100%;
+		width: 80%;
+		height: 80%;
 		margin: 0 auto;
 
 		transition: all 1000ms ease;
@@ -88,16 +120,18 @@ li {
 }
 
 /* .is-hidden:hover {
-		filter: brightness(1) ;
+filter: brightness(1) ;
 } */
 
 .list {
+		display: block;
+
 		width: 80%;
-		margin: 30px auto 0;
+		margin: 2rem auto 1rem;
 }
 
 .list li {
-		margin: 25px 0 15px;
+		margin: 1rem;
 }
 
 .App-link {
@@ -105,13 +139,13 @@ li {
 }
 
 .pokemon-item {
-		padding: 10px 0;
+		padding: 0.5rem 0;
 
 		background-color: #565f62;
 		border: 2px solid #61dafb;
 
+		font-size: 1rem;
 		color: white;
-		font-size: 1.2rem;
 		text-transform: capitalize;
 
 		cursor: pointer;
@@ -139,5 +173,9 @@ li {
 
 		color: #6b7376;
 
+		pointer-events: none;
+}
+
+.only-disabled {
 		pointer-events: none;
 }
