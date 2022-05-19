@@ -31,7 +31,7 @@ const Pokemon = ({ pokemones, cambiaClass }) => {
 	return (
 		<>
 			<header className='App-header'>
-				<h2>¿ Quién es este Pókemon ?</h2>
+				<h2>¿ Quién es este Pokémon ?</h2>
 			</header>
 			<main className='App-body'>
 				<div className='picture'>
