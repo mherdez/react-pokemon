@@ -11,14 +11,11 @@ const Pokemon = ({ pokemones, cambiaClass }) => {
 			cambiaClass(id, true);
 			setOk(true);
 			setMensaje({ dos: '¡ Correcto !' });
-			document.querySelector('ul').classList.add('only-disabled');
 		} else {
 			cambiaClass(id, false);
 
 			document.querySelector('img').classList.remove('is-hidden');
-			const $li = document.querySelectorAll('li');
-			console.log($li);
-			$li.forEach((li) => li.classList.add('is-disabled'));
+
 			const namePokemon =
 				pokemones[random].name[0].toUpperCase() + pokemones[random].name.substring(1).toLowerCase();
 			setMensaje({
@@ -26,6 +23,9 @@ const Pokemon = ({ pokemones, cambiaClass }) => {
 				dos: `${namePokemon}`,
 			});
 		}
+		document.querySelector('ul').classList.add('only-disabled');
+		const $li = document.querySelectorAll('li');
+		$li.forEach((li) => li.classList.add('is-disabled'));
 	};
 
 	return (

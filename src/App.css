@@ -8,7 +8,7 @@
 
 @media (min-width: 576px) {
 		* {
-				font-size: 24px;
+				font-size: 23px;
 		}
 }
 
@@ -160,11 +160,19 @@ filter: brightness(1) ;
 }
 
 .is-ok, .is-ok:hover {
-		background-color: green;
+		background-color: rgb(25, 115, 31);
+		box-shadow: 0 0 10px 2px rgb(9, 229, 27);
+		border: 2px solid #5ed84e;
+
+		color: white;
 }
 
 .is-not-ok, .is-not-ok:hover {
-		background-color: red;
+		background-color: rgb(217, 34, 17);
+		box-shadow: 0 0 10px 2px rgb(217, 34, 17);
+		border: 2px solid #ff6161;
+
+		color: white;
 }
 
 .is-disabled {
@@ -172,8 +180,6 @@ filter: brightness(1) ;
 		border-color: #537076;
 
 		color: #6b7376;
-
-		pointer-events: none;
 }
 
 .only-disabled {
